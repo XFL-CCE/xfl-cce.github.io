@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+* {	
+	margin: 0; 
+	padding:0; 
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+	font-family: 'Amatic SC', serif;
+	font-size: 2rem;
+	font-weight: : bold;
+	background-color: rgba(184,241,253,0.1);
+}
+
+
+header {
+	top: 20%;
+
+	/*display: flex;*/
+	position: absolute;
+	display: block;
+
+	width: 100%;
+
+	text-align: center;
+
+	font-weight: bold;
+
+
+
+}
+
+header h1 {
+	font-size: 2rem;
+	top: 20%;
+	width: 100%;
+}
+
+
+nav {
+	display: inline-flex;
+	flex-wrap: wrap;
+	font-size: 1rem;
+	top: 35%;
+	position: relative;
+
+
+
+}
+
+nav a:link, nav a:visited  {
+
+	color: black;
+	background: rgba(0,0,0,0.1);
+	text-decoration: none;
+	padding: 5px 20px;
+
+}	
+
+
+#active_nav {
+	background: rgba(0,0,0,0.3);
+}
+
+nav a:hover {
+	background-color: rgba(0,0,0,0.15);
+	color: white;
+	box-shadow: inset 0 -2px 0 white;
+}
+
+
+#scrollgif {
+	position: absolute;
+	bottom: -5px;
+	right: 10px;
+	margin-left: auto;
+	max-height: 10%;
+}
+
+
+#s1 {
+	height: 100%;
+	width: 100%;
+	background: url(../images/bg1.jpg) fixed no-repeat bottom left;
+	background-size: cover;
+}
+
+
+#s2 {
+/*	display:flex;
+	justify-content: center;
+	align-items: center;*/
+	height: 100%;
+	background: url(../images/bg2.jpg) fixed no-repeat center center;
+	background-size: cover;
+	margin-top: 5px;
+
+}
+
+#s3 {
+	height: 100%;
+	background: url(../images/bg3.jpg) fixed no-repeat top center;
+	background-size: cover;
+	text-align: center;
+}
+
+
+#info {
+	padding: 50px 10px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	font: 0.5rem arial, sans-serif;
+
+}
+
+#info h1 {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+section article {
+	margin: 10px;
+	justify-content: center;
+	padding-bottom: 20px;
+	border-bottom: solid #333 1px;
+}
+
+
+#info img {
+	max-width: 100px;
+}
+
+.img_left {
+	float: left;
+}
+.img_right {
+	float: right;
+}
+
+article h2, article h3 {
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+#article2 {
+text-align: right;
+}
+
+footer {
+	display: block;
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	bottom:5px;
+	font: 0.4rem arial, serif;
+	font-style: italic;
+}
+
+
+
+footer:after {
+	content: "Prepared for Santo Romano | HTML5 and CSS3";
+}
+
+
+
+
+
