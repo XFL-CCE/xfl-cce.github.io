@@ -1,0 +1,1067 @@
+@import url('https://fonts.googleapis.com/css?family=Alex+Brush|Arimo|La+Belle+Aurore|Mrs+Saint+Delafield|Passion+One');
+
+
+/*font-family: 'Alex Brush', cursive;
+font-family: 'Mrs Saint Delafield', cursive;
+font-family: 'Passion One', cursive;
+font-family: 'Arimo', sans-serif;
+font-family: 'La Belle Aurore', cursive;*/
+
+
+* {	
+	margin: 0; 
+	padding:0; 
+	box-sizing: border-box;
+}
+
+
+
+html, body {
+	height: 100%;
+	background-color: transparent;
+	font: 2vmin 'Arimo', sans-serif;
+	justify-content: center;
+	margin: auto;
+	overflow: auto;
+	font-family: 'Arimo', sans-serif;
+
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+
+
+/*-=================-*/
+/*-=================-*/
+/*-=  HEADER ONLY  =-*/
+/*-=================-*/
+/*-=================-*/
+
+
+#cover_image {
+
+	background: url(../images/bg1.jpg) fixed no-repeat bottom center;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	padding-top: 50px;
+	position: relative;
+
+}
+
+
+header h1 {
+	font: 15vmin 'Passion One', bold;
+	text-align: center;
+	text-shadow: 0px 0px 2px rgba(0,0,0,.75);
+	display: block;
+	animation: bounceInDown 1s;
+}
+
+/* header h2 */
+#typed_div {
+	text-align: center;
+	font-size: 4vmin;
+	font-family: 'Courier New', monoscript;
+	opacity: 0;
+	animation: fadeIn 1s 1s forwards;
+	/*text-shadow: 0px 0px 1px rgba(0,0,0,.75);*/
+		font-weight: light;
+
+}
+
+#typed {
+	font-weight: lighter;
+	color: #115D8C;
+/*	color: black;
+*/	font-style: italic;
+	text-shadow: none;
+}
+
+#icon_container {
+	display: none;
+	color: black;
+
+}
+
+
+#scrollgif {
+	justify-content: center;
+	max-width: 50px;
+	max-height: 50px;
+	position: absolute;
+	bottom: -10px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+
+}
+
+
+
+
+
+
+
+
+
+/*-=================-*/
+/*-=================-*/
+/*-=  ACTUAL BODY  =-*/
+/*-=================-*/
+/*-=================-*/
+
+
+
+
+
+.nav_page_index {
+ 	display:flex;
+ 	flex-flow: row wrap;
+ 	flex-direction: row;
+
+ 	width: 100%;
+	position: sticky;
+		top: 0;
+		left: 0;
+	border-bottom: 2px solid gray;
+	align-items: center;
+	background-color: #0a0a0a;
+	z-index: 99;
+
+	justify-content: space-between;
+	min-height: 7%;
+	height: auto;
+}
+.nav_page_2 {
+ 	display:flex;
+ 	flex-flow: row wrap;
+ 	flex-direction: row;
+
+ 	width: 100%;
+	position: fixed;
+
+	border-bottom: 2px solid gray;
+	align-items: center;
+	background-color: #0a0a0a;
+	z-index: 99;
+
+	justify-content: space-between;
+	min-height: 7%;
+	height: auto;
+}
+
+
+
+.nav_menu {
+
+	/*for arriving and leaving*/
+	display: inline-block;
+	transition: all 0.5s;
+	overflow: hidden;
+	padding-bottom: 3px;
+}
+
+nav a h3 {
+	display: none;
+}
+
+
+#contact {
+margin-left: auto;
+}
+
+.spinners, .nav_menu p {
+	display: inline-block;
+	font-size: 20px;
+}
+
+	nav a {
+		display: block;
+		margin: 3px;
+	}
+
+nav a:hover h3, nav a:hover i, nav a:hover .spinners {
+	color: white;
+}
+nav a:hover .spinners  {
+	animation: spin 0.3s linear;
+}
+
+
+
+
+nav a:link, a:visited {
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	color: hsla(0,0%,100%,.75);
+	font-weight: bold;
+	font-size: 20px;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown:hover {
+	color: white;
+}
+
+
+.dropdown_pages {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 9999;
+}
+
+.dropdown_pages a, .dropdown_pages a:visited, .dropdown_pages a:link {
+    color: black;
+}
+
+.dropdown_pages a:hover {background-color: #ddd}
+
+.dropdown:hover .dropdown_pages {
+    display: block;
+}
+
+.current_page {
+	font-style: italic;
+	color: lightgray !important	;
+	cursor: not-allowed;
+}
+
+/*-------------------------------------------------------*/
+
+
+
+#form_overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+	background-color: #0a0a0a;
+    overflow-x: hidden;
+    transition: 0.5s;
+     text-decoration: none;
+
+}
+
+#overlay-content {
+	opacity: 0;
+    justify-content: left;
+    text-align: left;
+	margin: 5% 5% 0;
+    font-size: 25px;
+    color: white;
+    letter-spacing: normal;
+    line-height: 35px;
+    padding-top: 30px;
+}
+
+
+#overlay-content form h1 {
+	padding-bottom: 20px;
+
+}
+#overlay-content form h3 {
+	font-size: inherit;
+	display: inline;
+	font-weight: normal;
+
+}
+
+#overlay-content form input[type=text] {
+	text-transform: capitalize;
+
+}
+
+#overlay-content form input[type=text], input[type=email], textarea {
+	width: auto;
+	padding: 5px 3px;
+	margin: 6px 3px;
+
+	border: none;
+	outline: none;
+
+	font-style: underline;
+	border-bottom: 1px solid #fff;
+	font-size: 22px;
+	transition: all .3s;
+	color: #D7DCF2;
+
+	background-color: inherit;
+		resize: none;
+}
+
+#tarea_label {
+	padding-top: 10px;
+	display: block;
+	width: 100%;
+}
+
+#mail_label {
+	display: block;
+	width: 100%;	
+
+}
+
+input [type=email] {
+	display: block;	
+	width: 100%;
+}
+
+input[type=submit] {
+	display: block;
+	min-width: 20%;
+	width: auto;
+	background-color: #D7DCF2;
+	color: black;
+	padding: 15px 30px;
+	margin-top: 30px;
+	outline: none;
+	border: none;
+	border-radius: 15px;
+	transition: all .3s;
+	cursor: pointer;
+	font-size: inherit;
+}
+
+input[type=submit]:hover,
+input[type=submit]:focus {
+	color: black;
+	background-color: white;
+	font-size: 101%;
+	clear:left;
+}
+
+
+.overlay a {
+    text-decoration: none;
+}
+.overlay a:hover .spinners {
+	animation: spin 0.3s linear;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+
+.overlay .closebtn {
+    position: absolute;
+    display: block;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #FFF;
+}
+
+
+/*---------------------__*/
+
+
+
+
+#s1_container {
+	padding: 10px;
+	transition: margin-left 0.5s;
+	margin-right: 0;
+	font-family: consolas, serif;
+	color: darkgray;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 80%
+	height:100%;
+
+}
+
+
+
+
+
+/*.second_p {
+	columns: 2;
+	column-rule: 1px solid lightgray;
+}*/
+
+#s1_container hgroup h1 {
+	font-size: 3vmax;
+	margin-top: 20px;
+	font-family: 'Arimo', sans-serif;
+	color: black;
+}
+#s1_container hgroup h2 {
+	font-size: 2vmax;
+	font-weight: normal;
+	font-style: italic;
+	margin-bottom: 20px;
+	font-family: 'Arimo', sans-serif;
+	color: black;
+
+}
+#s1_container img {
+margin: auto;
+margin-bottom: 20px;
+}
+#s1_container img:hover {
+	filter: blur(1px);
+}
+
+.right-side-column {
+	border-right: 1px solid darkgray;
+	font-size: 1.5vmax;
+	display: inline-block;
+	float: left;
+	text-transform: uppercase;
+	margin-right: 10px;
+	padding-right: 10px;
+}
+
+#s1_container p {
+	padding-bottom: 30px;
+}
+
+
+
+
+
+/* PAGE 22222222222222222222 */
+.s1_container_page2 {
+
+	display: flex;
+	padding: 5px !important;
+	flex-wrap: wrap;
+	width: 50%;
+	align-items: flex-end;
+	background-color: rgba(255,255,255,0.2);
+	height: auto;
+	position: absolute;
+		bottom: 50%;
+		left: 25%;
+
+}
+
+.s1_container_page2 article {
+	flex: 1 auto;
+	text-align: center;
+	background: rgba(50,50,50,0.9);
+	color:black;
+	margin: 1px;
+	height: 30px;
+	margin-top: 6px;
+	position: relative; /* for the following absolute positions of descriptions to be absolute */
+
+
+	overflow: hidden;
+	/*to overflow the figcaption text that's in negative position under the container */
+
+/*	border-radius: 50%;*/ /*fun with border radius*/
+
+}
+
+
+.s1_container_page2 article h1 {
+	color:black;
+	width: 100%;
+	text-align: center;
+}
+
+.s1_container_page2 article:hover h1 {
+	animation: fadeOut 0.2s forwards;
+}
+
+.s1_container_page2 p {
+	text-align: center;
+	color: black;
+
+	position: absolute;
+	width: 100%;
+	bottom: -100px;
+	transition: all 0.5s;
+	font-family: monospace;
+	z-index: 50;
+	/* .2s as third value to transition is for DELAY */
+}
+
+.s1_container_page2 article:hover p {
+	bottom: -20px;
+}
+
+.s1_container_page2 h1 {
+	display: block;	
+	width: 100%;
+	color:black;
+	font-family: monospace;
+	text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+
+}
+
+.s1_container_page2 p a {
+	text-decoration: none;
+	display: block;
+	width: 100%;
+	height: 100%;
+
+
+	font-family: monospace;
+	/* .2s as third value to transition is for DELAY */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-=================-*/
+/*-=================-*/
+/*-= ABOUT OVERLAY =-*/
+/*-=================-*/
+/*-=================-*/
+
+
+
+
+#about_overlay {
+    height: 0;
+    width: 0;
+    position: fixed;
+		top: 0;
+		left: 0;
+    z-index: 999;
+
+	visibility: hidden;
+	background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    text-decoration: none;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.75);
+    background: url(../images/xavier_montserrat.jpg) no-repeat bottom center;
+    background-size: cover;
+
+
+	top: 10%;
+	left: 50%;
+	margin-top: -5%;
+	margin-left: -20%
+
+}
+
+}
+
+#about_overlay a.closebtnAbout {
+	z-index: 999;
+}
+
+#about_overlay_content {
+	opacity: 0;
+    justify-content: center;
+    text-align: center;
+	margin: 20% 5% 5%;
+    font-size: inherit;
+    color: black;
+    letter-spacing: normal;
+}
+
+.closebtnAbout {
+	position: absolute;
+	top: 0;
+	right: 4px;	
+}
+
+#about_overlay a:hover .spinners  {
+	animation: spin 0.3s linear;
+	color:red;
+}
+
+#about_overlay a, #about_overlay a:link, #about_overlay a:visited   {
+	color: black;
+}
+
+#about_overlay hgroup h1 {
+	font-size: 300%;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.75);
+
+}
+#about_overlay hgroup h3 {
+	color: gray;
+	font-size: 70%;
+}
+
+#about_overlay hgroup {
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+
+#about_overlay p {
+	text-align: left;
+	font-size: 2.5vmin;
+	max-width: 80%;
+	margin-right: auto;
+	margin-left: auto;
+	height: 100%;
+	padding: 2px;
+	margin-bottom: 5px;
+}
+#about_overlay p:hover {
+	font-style: italic;
+}
+
+#about_overlay img {
+	max-height: 200px;
+	max-width: 200px;
+	border-radius: 50% 50%;
+	margin-bottom: 30px;
+}
+
+#s1_last_page {
+	height: 100%;
+	position: relative;
+}
+
+#s1_last_page h1 {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	text-shadow: 0px 0px 4px rgba(50,50,50,0.5)
+}
+
+
+#s2_last_page {
+	min-height: 80%
+	height: auto;
+	background:white;	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#s2_last_page aside {
+	width: 70%;
+	margin: 20px;
+	padding: 5px 30px;
+
+	position: relative;
+	overflow: hidden;
+	font-size: 200%;
+}
+
+#s2_last_page aside.align-right {
+	background-color: lightgray;
+	transition: all 0.2s ease-in-out;
+		text-align: right;
+
+}
+#s2_last_page aside.align-left {
+	transition: all 0.2s ease-in-out;
+		text-align: left;
+}
+
+#aside-with-image {
+	padding-right: 0 !important;
+}
+#aside-with-image img {
+	position: relative;
+	max-height: 250px;
+}
+#s2_last_page aside .aside-content {
+		transition: all 0.2s ease-in-out;
+		max-width: 100%;
+}
+
+#s2_last_page aside:hover .aside-content {
+	transform: scale(1.05);
+}
+
+#s2_last_page aside:hover .aside-content {
+	transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+footer .last_page {
+	width: 100%;
+
+	display: block;
+
+	background-color: rgba(10, 10, 10, 1);
+	color: white;
+
+
+	margin-top: 10px;
+	padding: 10px;
+
+	box-shadow: 0px -4px 3px rgba(10, 10, 10, 0.90);
+}
+
+
+
+
+
+footer .extra_pages {
+	width: 100%;
+	position: fixed;
+		bottom: 0;
+		left: 0;
+	display: block;
+
+	background-color: rgba(10, 10, 10, 1);
+	color: white;
+
+
+	margin-top: 10px;
+	padding: 10px;
+
+	box-shadow: 0px -4px 3px rgba(10, 10, 10, 0.90);
+}
+
+
+footer {
+	width: 100%;
+	/*position: relative;*/
+	/*position: absolute;
+			bottom: 0;
+			left: 0;*/
+
+	background-color: rgba(10, 10, 10, 1);
+	color: white;
+
+
+	margin-top: 10px;
+	padding: 10px;
+
+	box-shadow: 0px -4px 3px rgba(10, 10, 10, 0.90);
+}
+
+#santo {
+	color: blue;
+}
+
+footer p {
+	padding: 5px;
+	max-width: 80%;
+}
+
+footer #worth_it {
+	font-weight: bolder;
+	font-size: 3vmin;
+}
+
+footer p strike {
+	color: #4D565E;
+	font-size: 2vmin;
+}
+
+footer p b {
+	display: inline-block;
+	font-size: 14px;
+	transform: rotate(-10deg);
+}
+
+#by_me {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	color: white;
+	font-size: 2vmin;
+	line-height: normal;
+}
+
+.by_me_pages {
+	position: absolute;
+	bottom: 1px;
+	right: 2px;
+	color: white;
+	font-size: 2vmin;
+	line-height: normal;
+
+}
+
+
+
+video#school_bg_vid {
+	 position: fixed;
+	 right: 0;
+	 top: 7%;
+
+	 min-width: 100%;
+	 min-height: 100%;
+	 
+
+
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+	 z-index: -1;
+	 background: url(../images/school_bg_vid.jpg) fixed no-repeat top center;
+	 background-size: cover;
+
+
+	 bottom: 0;
+
+	 width: auto;
+	 height: auto;
+	   /* Center the video */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-=================-*/
+/*-=================-*/
+/*-= MEDIA QUERIES =-*/
+/*-=================-*/
+/*-=================-*/
+
+
+
+@media all and (min-width: 500px) {
+
+	#icon_container {
+	display: block;
+
+	font-size: 1.5vmin;
+
+	position: absolute;
+	bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+	left: 2px;
+	bottom: 2px;
+
+	margin-right: 10px;
+
+	}
+
+	#icon_container i {
+		display: block;
+		padding-bottom: 5px;
+	}
+
+
+	#scrollgif {
+	max-width: 50px;
+	max-height: 50px;
+	position: absolute;
+	bottom: -10px;
+	margin-right: 10px;
+	}
+
+	nav {
+		height: auto;
+	}
+
+	nav a h3 {
+		display: block;
+	}
+
+
+	.nav_menu a:link, a:visited {
+		font-size: 24px;
+	}
+
+    .overlay a {font-size: 24px}
+    .overlay div.spinners {font-size: 30px;}
+    .overlay .closebtn {
+        font-size: 24px;
+        top: 10px;
+        right: 20px;
+    }
+
+	footer p i { /* was too big on mobile*/
+	font-size: 15px;
+	}	
+
+	#overlay-content {
+    line-height: 45px;
+    padding-top: 15px;
+    font-size: 30px;
+	}
+
+	#about_overlay {
+		top: 20%;
+		left: 50%;
+	}
+
+
+/*END MEDIA QUERIES*/
+/*END MEDIA QUERIES*/
+/*END MEDIA QUERIES*/
+
+}
+
+
+
+
+
+
+/*-=================-*/
+/*-=================-*/
+/*-=   ANIMATIONS  =-*/
+/*-=================-*/
+/*-=================-*/
+
+
+
+@-webkit-keyframes bounceInDown {
+/*    0%,60%,75%,90%,to {
+        animation-timing-function: cubic-bezier(.215,.61,.355,1)
+    }*/
+    0% {
+        opacity: 0;
+        transform: translate3d(0,-5000px,0)
+    }
+    60% {
+        opacity: 1;
+        transform: translate3d(0,25px,0)
+    }
+    75% {
+        transform: translate3d(0,-10px,0)
+    }
+    90% {
+        transform: translate3d(0,5px,0)
+    }
+    to {
+        transform: none
+    }
+}
+
+@keyframes fadeIn {
+	from {opacity: 0;}
+	to {opacity:1;}
+}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+@keyframes fadeOut {
+	from {opacity: 1;}
+	to {opacity:0;}
+}
+@keyframes test {
+	from {width: 0;}
+	to {width: 100%;}
+}
+@keyframes test2 {
+	from {width: 100%;}
+	to {width: 0;}
+}
+
+@keyframes aboutAnimation {
+	from {width: 0;height: 0; visibility: hidden;}
+	to {width: 40%; height: 80%; visibility: visible;}
+
+}
+
+@keyframes aboutAnimationClose {
+	from {width: 40%; height: 80%; visibility: visible;}
+	to {width: 0;height: 0; visibility: hidden;}
+
+}
+
+@keyframes fadeOutHalf {
+	from {opacity: 1;}
+	to {opacity:0.2;}
+}
+@keyframes fadeInHalf {
+	from {opacity: 0.2;}
+	to {opacity:1;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-=================-*/
+/*-=================-*/
+/*-=       END     =-*/
+/*-=================-*/
+/*-=================-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
