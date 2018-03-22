@@ -49,8 +49,12 @@
 
 function openForm() {
 
-  document.getElementsByClassName("disappear")[0].style.animation = "fadeOut 1s forwards";
    
+  var getAllDisappear = document.getElementsByClassName('disappear');
+  for (var i = 0; i < getAllDisappear.length; ++i) {
+      getAllDisappear[i].style.animation = "fadeOut 1s forwards";
+  }
+
     document.getElementById("form_overlay").style.animation = "test 1.5s 0.3s forwards";
     document.getElementById("overlay-content").style.animation = "fadeIn 1s 1s forwards";
 
@@ -58,10 +62,11 @@ function openForm() {
 
 
 function closeForm() {
-    // document.getElementById("form_overlay").style.width = "0";
 
-  document.getElementsByClassName("disappear")[0].style.animation = "fadeIn 1s forwards";
-
+  var getAllDisappear = document.getElementsByClassName('disappear');
+  for (var i = 0; i < getAllDisappear.length; ++i) {
+      getAllDisappear[i].style.animation = "fadeIn 1s forwards";
+  }
 
   document.getElementById("form_overlay").style.animation = "test2 1s forwards";
   document.getElementById("overlay-content").style.animation = "fadeOut 0.2s forwards";
@@ -72,7 +77,10 @@ function closeForm() {
 
 function openAbout() {
 
-    document.getElementsByClassName("disappear")[0].style.animation = "fadeOutHalf 1s forwards";
+  var getAllDisappear = document.getElementsByClassName('disappear');
+  for (var i = 0; i < getAllDisappear.length; ++i) {
+      getAllDisappear[i].style.animation = "fadeOutHalf 1s forwards";
+  }
 
     document.getElementById("about_overlay").style.animation = "aboutAnimation 1.5s 0.3s forwards";
     document.getElementById("about_overlay_content").style.animation = "fadeIn 1s 1s forwards";
@@ -81,9 +89,10 @@ function openAbout() {
 
 
 function closeAbout() {
-    // document.getElementById("form_overlay").style.width = "0";
-    document.getElementsByClassName("disappear")[0].style.animation = "fadeInHalf 1s forwards";
-
+  var getAllDisappear = document.getElementsByClassName('disappear');
+  for (var i = 0; i < getAllDisappear.length; ++i) {
+      getAllDisappear[i].style.animation = "fadeInHalf 1s forwards";
+  }
   document.getElementById("about_overlay").style.animation = "aboutAnimationClose 0.2s forwards";
   document.getElementById("about_overlay_content").style.animation = "fadeOut 0.2s forwards";
 
