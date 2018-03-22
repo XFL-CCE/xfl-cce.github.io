@@ -27,8 +27,7 @@ html, body {
 
 }
 
-img {
-	height: auto;
+#page1_placeholder_top {
 	max-width: 100%;
 }
 
@@ -376,7 +375,7 @@ input[type=submit]:focus {
 
 
 #s1_container {
-	padding: 10px;
+	padding: 50px;
 	transition: margin-left 0.5s;
 	margin-right: 0;
 	font-family: consolas, serif;
@@ -416,7 +415,7 @@ input[type=submit]:focus {
 margin: auto;
 margin-bottom: 20px;
 }
-#s1_container img:hover {
+#article_filler img:hover {
 	filter: blur(1px);
 }
 
@@ -433,9 +432,22 @@ margin-bottom: 20px;
 #s1_container p {
 	padding-bottom: 30px;
 }
+#article_filler {
+	max-width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
 
+#article_filler p {
+	margin-bottom: 40px;
+}
+ 
+.img_right_50 {
+	max-width: 50%;
+	margin-left: auto;
+	margin-right: auto;
 
-
+}
 
 
 /* PAGE 22222222222222222222 */
@@ -482,6 +494,12 @@ margin-bottom: 20px;
 .s1_container_page2 article:hover h1 {
 	animation: fadeOut 0.2s forwards;
 }
+
+.s1_container_page2 span {
+	font-size: 70%;
+
+}
+
 
 .s1_container_page2 p {
 	text-align: center;
@@ -634,6 +652,11 @@ margin-bottom: 20px;
 	font-style: italic;
 }
 
+#admire /*part of the about overlay*/ {
+	display: block;
+	font-size: 60%;
+}
+
 #about_overlay img {
 	max-height: 200px;
 	max-width: 200px;
@@ -665,7 +688,7 @@ margin-bottom: 20px;
 	align-items: center;
 }
 
-#s2_last_page aside {
+#s2_last_page article {
 	width: 70%;
 	margin: 20px;
 	padding: 5px 30px;
@@ -675,13 +698,13 @@ margin-bottom: 20px;
 	font-size: 200%;
 }
 
-#s2_last_page aside.align-right {
+#s2_last_page article.align-right {
 	background-color: lightgray;
 	transition: all 0.2s ease-in-out;
 		text-align: right;
 
 }
-#s2_last_page aside.align-left {
+#s2_last_page article.align-left {
 	transition: all 0.2s ease-in-out;
 		text-align: left;
 }
@@ -693,16 +716,16 @@ margin-bottom: 20px;
 	position: relative;
 	max-height: 250px;
 }
-#s2_last_page aside .aside-content {
+#s2_last_page article .aside-content {
 		transition: all 0.2s ease-in-out;
 		max-width: 100%;
 }
 
-#s2_last_page aside:hover .aside-content {
+#s2_last_page article:hover .aside-content {
 	transform: scale(1.05);
 }
 
-#s2_last_page aside:hover .aside-content {
+#s2_last_page article:hover .aside-content {
 	transform: scale(1.05);
 }
 
@@ -716,9 +739,8 @@ margin-bottom: 20px;
 
 
 
-footer .last_page {
+/*footer .last_page {
 	width: 100%;
-
 	display: block;
 
 	background-color: rgba(10, 10, 10, 1);
@@ -730,7 +752,7 @@ footer .last_page {
 
 	box-shadow: 0px -4px 3px rgba(10, 10, 10, 0.90);
 }
-
+*/
 
 
 
@@ -755,24 +777,22 @@ footer .extra_pages {
 
 footer {
 	width: 100%;
-	/*position: relative;*/
+	position: relative;
 	/*position: absolute;
 			bottom: 0;
 			left: 0;*/
 
+
 	background-color: rgba(10, 10, 10, 1);
 	color: white;
 
-
+	min-height: 5%;
 	margin-top: 10px;
 	padding: 10px;
 
 	box-shadow: 0px -4px 3px rgba(10, 10, 10, 0.90);
 }
 
-#santo {
-	color: blue;
-}
 
 footer p {
 	padding: 5px;
@@ -797,10 +817,10 @@ footer p b {
 
 #by_me {
 	position: absolute;
-	bottom: 10px;
+	bottom: 2px;
 	right: 10px;
 	color: white;
-	font-size: 2vmin;
+	font-size: 12px;
 	line-height: normal;
 }
 
