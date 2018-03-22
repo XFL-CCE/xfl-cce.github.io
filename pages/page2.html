@@ -65,39 +65,39 @@
 <!-- 
 )))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))) -->
 
-	<nav id="nav_js" class="nav_page_2">
+	<nav id="nav_js" class="nav_page_2 disappear">
 
-		<a href="../index.html" class="nav_menu">
-			<div class="spinners">
-				<i class="fas fa-arrow-alt-circle-left"></i>
-			</div>
-			<h3>Home</h3>
-		</a>
+			<a href="../index.html" class="nav_menu">
+				<div class="spinners">
+					<i class="fas fa-arrow-alt-circle-left"></i>
+				</div>
+				<h3>Home</h3>
+			</a>
 
 
-	<div class="dropdown">
-		<a href="#" class="dropdown">
-			<div class="spinners">
-				<!-- ☰ -->
-				<i class="far fa-file-alt"></i>
-			</div>
-			<h3>Pages</h3>
-		</a>
-			  <div class="dropdown_pages">
-		  	   		 <a href="../index.html">Home</a>
+		<div class="dropdown">
+			<a href="#" class="dropdown">
+				<div class="spinners">
+					<!-- ☰ -->
+					<i class="far fa-file-alt"></i>
+				</div>
+				<h3>Pages</h3>
+			</a>
+				  <div class="dropdown_pages">
+			  	   		 <a href="../index.html">Home</a>
 
-			  	    <a href="#" class="current_page">Page 2</a>
-				    <a href="page3.html">Page 3</a>
-			  </div>
-	</div>
+				  	    <a href="#" class="current_page">Page 2</a>
+					    <a href="page3.html">Page 3</a>
+				  </div>
+		</div>
 
-		<a href="#" class="nav_menu" id="menu_trigger" onclick="openForm()">
-			<div class="spinners">
-				<i class="fas fa-pencil-alt"></i>
-				<!-- <i class="far fa-comments"></i> -->
-			</div>
-			<h3>Email</h3>
-		</a>
+			<a href="#" class="nav_menu" id="menu_trigger" onclick="openForm()">
+				<div class="spinners">
+					<i class="fas fa-pencil-alt"></i>
+					<!-- <i class="far fa-comments"></i> -->
+				</div>
+				<h3>Email</h3>
+			</a>
 
 	</nav>
 
@@ -106,9 +106,10 @@
 
 <section id="s1_container" class="s1_container_page2">
 
-	<h1>I'm in the mood for...</h1>
+	<h1>I'm in the mood for...<span>(hover)</span></h1>
 
-	<article class="article_page2">
+
+	<article class="article_page2" class="disappear">
 		<a href="#">
 		<h1><i class="fas fa-eye"></i></h1>
 		<p>Hawaii</p>
@@ -130,16 +131,17 @@
 		</a>
 	</article>
 
-		<video autoplay loop muted poster="../images/school_bg_vid.jpg" class="center_vid" id="school_bg_vid">
+
+<!-- CONTROLS TRUE or else the video wasnt playing in iOS iPhone -->
+
+		<video autoplay controls="true" loop muted poster="../images/school_bg_vid.jpg" class="center_vid" id="school_bg_vid">
 			<source src="../videos/school_bg_vid.mp4" type="video/mp4">
 		</video>
 
 </section>
 
 
-<p id="footer_js" class="no-style">  
 
-</p>
 
 
 

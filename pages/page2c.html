@@ -65,7 +65,7 @@
 <!-- 
 )))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))) -->
 
-	<nav id="nav_js" class="nav_page_2">
+	<nav id="nav_js" class="nav_page_2 disappear">
 
 		<a href="../index.html" class="nav_menu">
 			<div class="spinners">
@@ -106,7 +106,7 @@
 
 <section id="s1_container" class="s1_container_page2">
 
-	<h1>I'm in the mood for...</h1>
+	<h1>I'm in the mood for...<span>(hover)</span></h1>
 
 	<article id="a1_page2" class="article_page2">
 		<a href="page2.html">
@@ -131,7 +131,8 @@
 	</article>
 
 <!-- didnt have a poster -->
-		<video autoplay loop muted poster="" class="center_vid" id="school_bg_vid">
+<!-- CONTROLS TRUE or else the video wasnt playing in iOS iPhone -->
+		<video autoplay controls="true" loop muted poster="" class="center_vid" id="school_bg_vid">
 			<source src="../videos/one_sugar.mp4" type="video/mp4">
 		</video>
 
@@ -140,12 +141,6 @@
 </section>
 
 
-<footer class="extra_pages" id="footer_js">  
-
-	<p class="by_me_pages">
-		by Xavier Fernandez
-	</p>
-</footer>
 
 
 
